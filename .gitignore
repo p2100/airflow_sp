@@ -1,0 +1,8 @@
+__pycache__
+.vscode
+.env
+id_rsa
+.git
+alembic.ini
+.idea/
+*.json
