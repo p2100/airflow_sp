@@ -3,7 +3,7 @@ Airflow运行的sp后台任务
 
 - .env
 ```angular2html
-AIRFLOW_UID=0
+AIRFLOW_UID=50000
 AIRFLOW__CORE__FERNET_KEY=''
 
 AIRFLOW__CELERY__RESULT_BACKEND=''
