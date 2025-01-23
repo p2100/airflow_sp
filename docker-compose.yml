@@ -18,17 +18,17 @@ x-airflow-common:
     AIRFLOW__SCHEDULER__ENABLE_HEALTH_CHECK: 'true'
     # AIRFLOW__CORE__CATCHUP_BY_DEFAULT: False
     _PIP_ADDITIONAL_REQUIREMENTS: ${_PIP_ADDITIONAL_REQUIREMENTS:-}
-    # The following line can be used to set a custom airflow_config file, stored in the local airflow_config folder
-    # If you want to use it, outcomment it and replace airflow.cfg with the name of your airflow_config file
-    # AIRFLOW_CONFIG: '/opt/airflow/airflow_config/airflow.cfg'
+    # The following line can be used to set a custom config file, stored in the local config folder
+    # If you want to use it, outcomment it and replace airflow.cfg with the name of your config file
+    # AIRFLOW_CONFIG: '/opt/airflow/config/airflow.cfg'
   env_file:
     - .env
   volumes:
     - ${AIRFLOW_PROJ_DIR:-.}/dags:/opt/airflow/dags
+    - ${AIRFLOW_PROJ_DIR:-.}/config:/opt/airflow/config
     - ${AIRFLOW_PROJ_DIR:-.}/logs:/opt/airflow/logs
     - ${AIRFLOW_PROJ_DIR:-.}/plugins:/opt/airflow/plugins
     - ${AIRFLOW_PROJ_DIR:-.}/project:/opt/airflow/project
-    - ${AIRFLOW_PROJ_DIR:-.}/airflow_config:/opt/airflow/airflow_config
   user: "${AIRFLOW_UID:-50000}:0"
 
 services:

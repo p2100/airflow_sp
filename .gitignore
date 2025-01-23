@@ -6,3 +6,7 @@ id_rsa
 alembic.ini
 .idea/
 *.json
+project
+!project/.gitkeep
+logs
+!logs/.gitkeep
