@@ -6,6 +6,7 @@ from airflow.operators.python import PythonOperator
 
 sys.path.insert(0, 'project/')
 from apps.modules.staff.timer import update_feishu_info, synchronization_point
+from apps.modules.mcc.timer import main as mcc_link
 
 default_args = {
     'owner': 'airflow',
@@ -40,4 +41,18 @@ synchronization_point_dags = PythonOperator(
     task_id='synchronization_point',
     python_callable=synchronization_point,
     dag=synchronization_point_dag
+)
+
+mcc_link_dag = DAG(
+    'mcc_link',
+    default_args=default_args,
+    description='MCC Link轮询',
+    schedule_interval="*/20 * * * *",
+    catchup=False,
+)
+
+mcc_link_dags = PythonOperator(
+    task_id='mcc_link',
+    python_callable=mcc_link,
+    dag=mcc_link_dag
 )
