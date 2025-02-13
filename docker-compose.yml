@@ -10,6 +10,8 @@ x-airflow-common:
   # build: .
   environment:
     &airflow-common-env
+    TZ: Asia/Shanghai
+    AIRFLOW__LOGGING__LOG_FORMAT: '[%%(asctime)s] -[%%(thread)s]- {%%(filename)s:%%(lineno)d} - %%(message)s'
     AIRFLOW__CORE__DEFAULT_TIMEZONE: Asia/Shanghai
     AIRFLOW__CORE__EXECUTOR: CeleryExecutor
     AIRFLOW__CORE__DAGS_ARE_PAUSED_AT_CREATION: 'true'
