@@ -14,7 +14,7 @@ from script.cron.cdn_alarm_doc import cdn_alarm_doc
 
 default_args = {
     'owner': 'airflow',
-    'start_date': datetime(2025, 2, 10),
+    'start_date': datetime(2025, 2, 13),
     'retries': 0,
     'retry_delay': timedelta(minutes=1),
 }

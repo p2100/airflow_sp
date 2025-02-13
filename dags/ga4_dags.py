@@ -20,7 +20,7 @@ from script.ga_data.ga4.get_high_cvr_lp_md import get_high_cvr_lp_md
 
 default_args = {
     'owner': 'airflow',
-    'start_date': datetime(2025, 2, 10),
+    'start_date': datetime(2025, 2, 13),
     'retries': 0,
     'retry_delay': timedelta(minutes=1),
 }

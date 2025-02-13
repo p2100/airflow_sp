@@ -10,7 +10,7 @@ from script.cron.migrate_system_log import migrate_system_log
 
 default_args = {
     'owner': 'airflow',
-    'start_date': datetime(2025, 2, 10),
+    'start_date': datetime(2025, 2, 13),
     'retries': 0,
     'retry_delay': timedelta(minutes=1),
 }

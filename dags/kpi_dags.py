@@ -10,7 +10,7 @@ from script.cron.summarize_kpi_data import summarize_kpi_data
 
 default_args = {
     'owner': 'airflow',
-    'start_date': datetime(2025, 2, 10),
+    'start_date': datetime(2025, 2, 13),
     'retries': 0,
     'retry_delay': timedelta(minutes=1),
 }

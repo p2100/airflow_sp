@@ -10,7 +10,7 @@ from script.cron.sync_follow_campaign import sync_follow_campaign
 
 default_args = {
     'owner': 'airflow',
-    'start_date': datetime(2025, 2, 10),
+    'start_date': datetime(2025, 2, 13),
     'retries': 0,
     'retry_delay': timedelta(minutes=1),
 }
